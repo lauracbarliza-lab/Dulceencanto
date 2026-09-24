@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dulce Encanto — Logo y Menú</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--logo:url(logo.png);--bg:#fff9f6;--ink:#5a2c47;--pk:#f0a8d8;--dk:#a05880;--cream:#fcf3ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241820;--ink:#ffe6ef}}
+:root[data-theme="dark"]{--bg:#241820;--ink:#ffe6ef}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Quicksand",system-ui,sans-serif}
+main{max-width:900px;margin:0 auto;padding:24px 16px 40px;display:flex;flex-wrap:wrap;gap:28px;justify-content:center;align-items:flex-start}
+figure{margin:0;width:min(100%,380px)}
+figcaption{text-align:center;font-size:14px;opacity:.7;margin-top:10px}
+.box{position:relative;overflow:hidden;border-radius:20px;container-type:inline-size;background:linear-gradient(170deg,#fff8f4,#fbe6ee);box-shadow:0 18px 40px -20px rgba(160,88,128,.55)}
+.lg{background:var(--logo) center/contain no-repeat;animation:wob 5s ease-in-out infinite}
+.logo{aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.logo .lg{position:relative;width:88%;aspect-ratio:782/314}
+.poster{aspect-ratio:9/16;color:#5a2c47;display:flex}
+.in{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:7cqw 7cqw 7cqw;gap:3cqw}
+.poster .lg{width:76cqw;aspect-ratio:782/314}
+.eyebrow{font-size:3.6cqw;letter-spacing:.5em;font-weight:700;color:var(--dk);margin:0 0 1cqw;padding-left:.5em}
+.big{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:900;font-size:22cqw;line-height:1;margin:0;color:var(--pk);text-shadow:.9cqw .9cqw 0 var(--dk);animation:pop 3.2s ease-in-out infinite}
+.price{display:inline-block;margin:3cqw 0 0;background:linear-gradient(110deg,#fff 40%,#ffe9f4 50%,#fff 60%) 0 0/250% 100%;color:var(--dk);font-weight:700;font-size:8cqw;padding:.5cqw 6cqw;border-radius:99cqw;box-shadow:0 1.1cqw 0 var(--pk);animation:shine 3s linear infinite}
+.card{width:100%;box-sizing:border-box;background:rgba(240,168,216,.22);border-radius:6cqw;padding:3.2cqw 3.5cqw 3cqw;animation:bob 6s ease-in-out infinite}
+.label{display:flex;align-items:center;gap:3cqw;font-size:3.3cqw;letter-spacing:.45em;font-weight:700;color:var(--dk);margin-bottom:1.6cqw}
+.label:before,.label:after{content:"";flex:1;height:.5cqw;background:var(--dk);opacity:.35;border-radius:1cqw}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:1.8cqw}
+li{animation:up .6s cubic-bezier(.2,.8,.2,1) both}
+li button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:3cqw;padding:1.6cqw 3cqw;border-radius:99cqw;font-size:4cqw;line-height:1.2;font-weight:700;text-align:left;cursor:pointer;color:#5a2c47;background:#fff;box-shadow:0 .7cqw 0 rgba(160,88,128,.28);transition:transform .2s,background .2s,color .2s}
+li button:hover{transform:translateX(1cqw)}
+li button:focus-visible{outline:.6cqw solid var(--dk)}
+li button .e{font-size:4.8cqw}
+li button.on{background:var(--pk);color:#4a1f38;box-shadow:0 .7cqw 0 var(--dk);animation:jelly .5s}
+li button.on:after{content:"✓";margin-left:auto;font-size:4.2cqw}
+.foot{margin:0}
+.pill{display:inline-block;color:#fff;text-decoration:none;font-weight:700;font-size:4.8cqw;padding:2.6cqw 7cqw;border-radius:99cqw;letter-spacing:.04em;background:linear-gradient(110deg,#c2699c 40%,#dc86b8 50%,#c2699c 60%) 0 0/250% 100%;box-shadow:0 1.2cqw 0 var(--dk);animation:pulse 2.4s ease-in-out infinite,shine 3s linear infinite}
+.pill small{display:block;font-size:3.1cqw;font-weight:500;letter-spacing:.14em;opacity:.95}
+.sp{position:absolute;border-radius:99px;opacity:.75;animation:drift var(--d) ease-in-out var(--l) infinite alternate}
+.hh{position:absolute;bottom:-8cqw;color:var(--pk);opacity:0;animation:rise var(--d) linear var(--l) infinite}
+.tw{position:absolute;color:var(--pk);font-size:5cqw;animation:tw 2.4s ease-in-out infinite;text-shadow:0 0 1cqw #fff}
+.bu{position:absolute;pointer-events:none;color:var(--dk);font-size:5cqw;z-index:5;animation:burst .8s ease-out forwards}
+@keyframes wob{0%,100%{transform:rotate(-1.6deg) translateY(0)}50%{transform:rotate(1.6deg) translateY(-1.2cqw)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes up{from{opacity:0;transform:translateY(3cqw)}to{opacity:1;transform:none}}
+@keyframes jelly{0%{transform:scale(.94)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+@keyframes shine{to{background-position:-150% 0}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-.8cqw)}}
+@keyframes drift{to{transform:translate(var(--x),var(--y)) rotate(var(--r2))}}
+@keyframes rise{0%{opacity:0;transform:translateY(0) scale(.6)}15%{opacity:.85}100%{opacity:0;transform:translateY(-190cqw) scale(1.2)}}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@keyframes burst{to{opacity:0;transform:translate(var(--bx),var(--by)) scale(1.5)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+<figure>
+<div class="box logo fx" data-n="14"><div class="lg" role="img" aria-label="Logo Dulce Encanto, repostería hecha en casa"></div></div>
+<figcaption>Logo</figcaption>
+</figure>
+
+<figure>
+<div class="box poster fx" data-n="24">
+<div class="in">
+<div class="lg" role="img" aria-label="Dulce Encanto"></div>
+<div>
+<p class="eyebrow">MENÚ</p>
+<p class="big">12oz</p>
+<span class="price">$15.000</span>
+</div>
+<div class="card">
+<div class="label">TOPPINGS</div>
+<ul id="tp"></ul>
+</div>
+<p class="foot"><a class="pill" id="order" href="#"><small>PIDE EL TUYO</small>305 328 4826</a></p>
+</div>
+</div>
+<figcaption>Toca los toppings para armar tu pedido</figcaption>
+</figure>
+</main>
+<script>
+var seed=7;function r(){seed=(seed*9301+49297)%233280;return seed/233280}
+var cols=['#f0a8d8','#d9b8ee','#f9d9c8','#fbc6e4','#e8c3d8','#fff'];
+document.querySelectorAll('.fx').forEach(function(el){
+  var n=+el.dataset.n,i,s,h;
+  for(i=0;i<n;i++){
+    s=document.createElement('span');s.className='sp';
+    s.style.cssText='left:'+(r()*100)+'%;top:'+(r()*100)+'%;width:'+(6+r()*6)+'cqw;height:2.6cqw;background:'+cols[i%cols.length]+';transform:rotate('+(r()*180)+'deg);--x:'+((r()-.5)*8)+'cqw;--y:'+((r()-.5)*8)+'cqw;--r2:'+(r()*180)+'deg;--d:'+(5+r()*5)+'s;--l:-'+(r()*6)+'s';
+    el.insertBefore(s,el.firstChild);
+  }
+  for(i=0;i<5;i++){
+    h=document.createElement('span');h.className='hh';h.textContent='♥';
+    h.style.cssText='left:'+(8+r()*84)+'%;font-size:'+(4+r()*4)+'cqw;--d:'+(7+r()*5)+'s;--l:-'+(r()*9)+'s';
+    el.insertBefore(h,el.firstChild);
+  }
+  [[14,10],[82,7],[90,34],[5,40]].forEach(function(p,k){var t=document.createElement('span');t.className='tw';t.textContent='✦';t.style.cssText='left:'+p[0]+'%;top:'+p[1]+'%;animation-delay:-'+k*.6+'s';el.appendChild(t)});
+});
+var items=[['🍮','Arequipe'],['🍪','Galleta Oreo'],['🍘','Galleta Ducales'],['💛','Maracuyá'],['🥛','Leche en polvo + leche condensada'],['🍘','Galleta Ducales + arequipe']];
+var ul=document.getElementById('tp'),sel={};
+items.forEach(function(it,i){
+  var li=document.createElement('li');li.style.animationDelay=(.25+i*.12)+'s';
+  var b=document.createElement('button');b.innerHTML='<span class="e">'+it[0]+'</span>'+it[1];
+  b.onclick=function(){sel[i]=!sel[i];b.classList.toggle('on',!!sel[i]);upd();
+    if(sel[i]){var box=b.closest('.box'),q=box.getBoundingClientRect(),k=b.getBoundingClientRect();
+      for(var n=0;n<6;n++){var h=document.createElement('span');h.className='bu';h.textContent='♥';
+        h.style.left=(k.left-q.left+k.width*(.15+n*.14))+'px';h.style.top=(k.top-q.top)+'px';
+        h.style.setProperty('--bx',((n-2.5)*14)+'px');h.style.setProperty('--by',(-30-Math.random()*40)+'px');
+        box.appendChild(h);setTimeout(function(x){x.remove()},800,h)}}};
+  li.appendChild(b);ul.appendChild(li);
+});
+function upd(){
+  var t=items.filter(function(_,i){return sel[i]}).map(function(x){return x[1]});
+  var m='Hola Dulce Encanto! Quiero pedir un vaso de 12oz'+(t.length?' con: '+t.join(', '):'');
+  document.getElementById('order').href='https://wa.me/573053284826?text='+encodeURIComponent(m);
+}
+upd();
+</script>
+</body>
+</html>
